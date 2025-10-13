@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Hill High School GPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header-container">
+    <h1 class="main-header">Rock Hill High School GPA Calculator</h1>
+    <div class="subtitle">Weighted (6.0 scale) & Unweighted (5.0 scale)</div>
+  </div>
+
+  <div class="main-content">
+    <div class="disclaimer-box">
+      <span class="disclaimer-text">Disclaimer: WE ARE NOT AFFILIATED WITH ROCK HILL</span>
+    </div>
+    <div class="gpa-calc-explain-row">
+      <div class="gpa-calc-box">
+        <table>
+          <thead>
+            <tr>
+              <th>Class Level</th>
+              <th>Grade (out of 100)</th>
+              <th>GPA</th>
+            </tr>
+          </thead>
+          <tbody id="gpa-table-body">
+            <!-- Rows will be inserted here by JS -->
+          </tbody>
+        </table>
+        <div id="final-gpa">Weighted GPA: 0.00 &nbsp; | &nbsp; Unweighted GPA: 0.00</div>
+      </div>
+      <div class="gpa-explanation">
+        <h3>How GPA is Calculated</h3>
+        <ul>
+          <li>Each class is assigned a level: Onlevel (max 5.0), Honors (max 5.5), or AP (max 6.0).</li>
+          <li>Enter your grade (out of 100) for each class.</li>
+          <li>GPA for each class: <b>max GPA for level − 0.1 × (100 − grade)</b>, floored at 0 for grades below 70.</li>
+          <li>Weighted GPA: Average of all class GPAs using their respective max values.</li>
+          <li>Unweighted GPA: Average of all class GPAs, always using 5.0 as the max (regardless of level).</li>
+        </ul>
+        <div class="gpa-sidenote" style="color:#a3c0e9; font-size:0.98em; margin-bottom:8px;">
+          * This is your current GPA and may differ from your official transcript.
+        </div>
+        <div class="handbook-link">
+          For official details, see the <a href="https://files-backend.assets.thrillshare.com/documents/asset/uploaded_file/4567/Pisd/58bbc5d4-3d86-48bc-a719-b9b627756f26/2025-26-High-School-Course-Catalog.pdf?disposition=inline" target="_blank" rel="noopener">Rock Hill High School Course Catalog (2025-26)</a> (pages 24-25).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
